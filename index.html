@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bo Mendez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,700&display=swap" rel="stylesheet">
+    <style>
+        .container {
+            height: 100%;
+            width: 100%;
+            display: grid;
+            font-family: 'Lato', sans-serif;
+            background: rgb(255,255,255);
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(220,239,255,1) 62%, rgba(28,111,189,1) 100%);
+        }
+
+        .exp_title {
+            display: flex;
+            flex-direction: row;
+            column-gap: 40pt;
+        }
+
+        @media only screen and (min-width: 700px) {
+            .container {
+                padding: 50pt;
+                grid-template-areas:
+                "contact contact"
+                "picture title"
+                "about_menu about"
+                "projects_menu projects"
+                "lang_menu lang"
+                "experience_menu experience";
+                grid-template-columns: 15% 50%;
+                column-gap: 20pt;
+                row-gap: 70pt;
+                font-size: 110%;
+            }
+
+            .picture {
+                justify-content: right;
+            }
+
+            .exp_title {
+                column-gap: 20pt;
+            }
+
+            .content {
+                margin-left: 50pt;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            .container {
+                padding: 20pt;
+                grid-template-areas:
+                    "contact contact"
+                    "picture picture"
+                    "title title"
+                    "about_menu about"
+                    "projects_menu projects"
+                    "lang_menu lang"
+                    "experience_menu experience";
+                grid-template-columns: 25% 60%;
+                column-gap: 10pt;
+                row-gap: 20pt;
+                font-size: 90%;
+            }
+
+            .picture {
+                justify-content: center;
+            }
+
+            .title {
+                justify-self: center;
+                margin-left: 0pt;
+                text-align: center;
+            }
+
+            .exp_title {
+                column-gap: 10pt;
+            }
+
+            .content {
+                margin-left: 10pt;
+            }
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: row;
+            column-gap: 20px;
+            height: 50px;
+            width: fit-content;
+        }
+
+        #Email {
+            color: rgb(0, 132, 255);
+        }
+
+        .picture {
+            grid-area: picture;
+            display: flex;
+        }
+
+        #Headshot {
+            margin: 10px;
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .title {
+            grid-area: title;
+            font-family: 'Lato', sans-serif;
+        }
+        
+        .about {
+            grid-area: about;
+        }
+
+        .about_menu, .projects_menu, .experience_menu, .lang_menu {
+            justify-self: right;
+        }
+
+        .about_menu {
+            grid-area: about_menu;
+        }
+
+        .projects_menu {
+            grid-area: projects_menu;
+        }
+
+        .projects {
+            grid-area: projects;
+        }
+       
+        .lang_menu {
+            grid-area: lang_menu;
+        }
+
+        .lang {
+            grid-area: lang;
+        }
+
+        .experience_menu {
+            grid-area: experience_menu;
+        }
+
+        .experience {
+            grid-area: experience;
+        }
+        
+        .indent {
+            margin-left: 10pt;
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: rgb(0, 132, 255);
+        }
+
+        h2, h3, h4, p, a {
+            margin-bottom: 5pt;
+            margin-top: 0pt;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: rgb(0, 132, 255);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contact">
+            <a id="Email" href="mailto:mendez_bo@yahoo.com">Email</a>
+            <a href="https://www.linkedin.com/in/bo-mendez/">LinkedIn</a>
+            <a href="https://github.com/bomendez/bomendez.github.io">GitHub</a>
+        </div>
+        <div></div>
+        <div class="picture">
+            <img id="Headshot" src="Images/bo.mendez.jpg">
+        </div>
+        <div class="title content">
+            <h1>Bo Mendez</h1>
+            <p>Full Stack SWE Seeking Internship</p>
+        </div>
+        <div class="about_menu">
+            <h2>About Me</h2>
+        </div>
+        <div class="projects_menu">
+            <h2>Projects</h2>
+        </div>
+        <div class="lang_menu">
+            <h2>Languages &</h2>
+            <h2>Frameworks</h2> 
+        </div>
+        <div class="about content">
+            <p>I am a people person. It’s the reason I’ve taught mathematics and computer science to high school and 
+                college students. I’ve decided to shift my career path because I want to show Latinx students like me 
+                that they can realize their dreams. I am excited to use my passion for problem solving and collaboration
+                with my next team!</p>
+        </div>
+        <div class="projects content">
+                <a href="https://github.com/bomendez/bomendez.github.io/tree/master/Task%20Scheduler"><h4>Task Manager</h4></a>                    
+                <p>A JSON processor in an MVC structure that saves and displays tasks. Written in Java.</p>
+                <br>
+                <a href="https://github.com/bomendez/bomendez.github.io/tree/master/PerfectDay"><h4>Perfect Day</h4></a>
+                <p>A RESTful fitness tracker processor using Spring boot and PostgreSQL. Written in Java.</p>
+                <br>
+                <a href="https://github.com/bomendez/bomendez.github.io/tree/master/Checkers"><h4>Checkers</h4></a>
+                <p>An OOD game with a UI and a computer player. Written in Python.</p>
+                <br>
+                <a href="https://github.com/bomendez/bomendez.github.io/tree/master/Recipes"><h4>Create Your Own Recipe</h4></a>
+                <p>A simple text processing terminal program. Written in Python.</p>
+        </div>
+        <div class="lang content">
+            <br>
+            <p>Python, Java, SQL, AGILE, Javascript, Springboot</p>
+        </div>
+        <div class="experience_menu content">
+            <h2>Experience</h2>
+        </div>
+        <div class="experience content">
+            <div class="exp_title">
+                <h4>Northeastern University</h4>
+                <p>2020-2022</p>
+            </div>    
+            <p>Masters of Computer Science</p>
+            <br>
+            <div class="indent">
+                <h4>Courses Taken</h4>
+                <ul>
+                    <li>Web Design</li>
+                    <li>Database Managment</li>
+                    <li>Foundations of SWE (AGILE and Lifecycles)</li>
+                    <li>Algorithms</li>
+                    <li>Computer Systems</li>
+                    <li>Object-Oriented Design</li>
+                    <li>Discrete Structures</li>
+                </ul>
+            </div>
+            <br>
+            <div class="exp_title">
+                <h4>Computer Science Teacher</h4>
+                <p>2016-2020</p>
+            </div>
+            <p>Summit Sierra High School</p>
+        </div>
+    </div>
+</body>
+</html>
